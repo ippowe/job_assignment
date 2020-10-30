@@ -1,24 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {ReactComponent as Tick} from './Icons/tick.svg';
+import {ReactComponent as Done} from './Icons/done.svg';
+import {ReactComponent as Delete} from './Icons/x-mark.svg';
+
+
+const PLACEHOLDER = "오늘 할일을 입력해주세요."
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        React Todo
       </header>
+      <form className="Todo-form">
+        <input className="Todo-input" placeholder={PLACEHOLDER} />
+      </form>
+      <ul className="Todo-list">
+        <li className="Todo-item">
+          <Tick className="Todo-check-icon"/>
+          <p className="Todo-text">javascript.info에서 javascript 공부</p>
+          <Delete className="Todo-delete-icon"/>
+        </li>
+        <li className="Todo-item">
+          <Tick className="Todo-check-icon"/>
+          <p className="Todo-text">javascript.info에서 javascript 공부</p>
+          <Delete className="Todo-delete-icon"/>
+        </li>
+        <li className="Todo-item__done">
+          <Done className="Todo-check-icon__done"/>
+          <p className="Todo-text">javascript.info에서 javascript 공부</p>
+          <Delete className="Todo-delete-icon"/>
+        </li>
+      </ul>
     </div>
   );
 }

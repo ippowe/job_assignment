@@ -1,13 +1,105 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  font-family: 'Spoqa Han sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  padding: 64px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App-header {
+  font-size: 48px;
+  font-weight: bold;
+  color: #4D4D60;
+  text-align: center;
+  padding-bottom: 32px;
+}
+
+.Todo-form {
+  width: 680px;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  border-bottom: 1px solid #979797;
+}
+
+input {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+input:focus {
+  outline: unset;
+}
+
+.Todo-input {
+  width: 100%;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #4D4D60;
+}
+
+.Todo-input::placeholder {
+  color: #B5B7BF
+}
+
+.Todo-list {
+  width: 680px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 4px;
+  line-height: 40px;
+}
+
+.Todo-text {
+  margin: 0;
+  font-size: 18px;
+  color: #4D4D60;
+  cursor: pointer;
+}
+
+.Todo-check-icon {
+  width: 16px;
+  height: 16px;
+  fill: #D7D9E0;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.Todo-delete-icon {
+  width: 16px;
+  height: 16px;
+  fill: #B5B7BF;
+  margin-left: auto;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.Todo-item__done .Todo-text{
+  text-decoration: line-through;
+  color: #B5B7BF;
+}
+
+.Todo-check-icon__done{
+  margin-right: 8px;
 }
