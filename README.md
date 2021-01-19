@@ -4,6 +4,12 @@ CRA로 만들어진 간단한 TODO 앱입니다. 아직 스타일과 뼈대만 �
 ## 수행 기술
 - React, Typescript, Javascript
 - 설치되어있는 모듈(node_modules) 외에 다른 외부 라이브러리는 사용하지 않도록 합니다. 
+- 패키지 매니저로 `yarn`을 사용하고 있습니다. 가급적이면 `yarn`을 사용해주세요.
+
+## 시작 하기
+1. `git init`
+2. `yarn install`
+3. `yarn run start`
 
 # 요구사항
 - 참고 요구사항의 순서는 난이도와 상관이 없음
